@@ -17,6 +17,7 @@ defmodule AddingPages.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/hello/:messenger/:messengee", HelloController, :show
     get "/hello/:messenger", HelloController, :show
     get "/hello", HelloController, :index
   end
